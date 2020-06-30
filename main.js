@@ -16,7 +16,7 @@ function lineChart() {
   console.log('entrou aqui 3');
   window.lineChart = Morris.Line({
     element: 'line-chart',
-    data: list.Afghanistan,
+    data: list.Afghanistan,  //pais fixo (não foi possivel passar o pais selecionado)
     xkey: 'date',
     ykeys: ['confirmed', 'deaths', 'recovered'],
     labels: ['Infectados', 'Mortos', 'recuperados'],
