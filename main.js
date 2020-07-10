@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
   lineChart();
 
@@ -17,7 +16,7 @@ function lineChart() {
   console.log('entrou aqui 3');
   window.lineChart = Morris.Line({
     element: 'line-chart',
-    data: list.pais,  //pais fixo (não foi possivel passar o pais selecionado)
+    data: list.Afghanistan,  //pais fixo (não foi possivel passar o pais selecionado)
     xkey: 'date',
     ykeys: ['confirmed', 'deaths', 'recovered'],
     labels: ['Infectados', 'Mortos', 'recuperados'],
@@ -39,15 +38,4 @@ function selecao() {
   mapa[nome] = [];
   console.log('teste mapa', mapa);
   console.log(this.pais);
-}
-function tabelaCov(dt, confirmados, recuperados, mortos){
-  let tabela = document.getElementById('tabelaCov');
-  let linha = document.createElement('tr');
-
-  linha.innerHTML = `
-  <td>${dt}</td>
-  <td>${confirmados}</td>
-  <td>${recuperados}</td>
-  <td>${mortos}</td>
-  `
 }
